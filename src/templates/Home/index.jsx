@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
+import { Button } from '../../components/Button/index';
+import { Heading } from '../..Components/Heading';
 import { useCounterContext } from '../../contexts/CounterContext';
 
 export const Home = () => {
-  const [state, actions] = useCounterContext();
-
-  useEffect(() => {
-    actions.increase();
-  }, [actions]);
-
   return (
     <div>
-      <h1 onClick={() => actions.increase()}>Oi</h1>
+      <Heading />
+
+      <div>
+        <Button />
+      </div>
     </div>
   );
 };
